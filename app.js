@@ -1,12 +1,7 @@
-const buttons = document.querySelectorAll(".fas");
-const faqs = document.querySelectorAll(".faq");
+const toggles = document.querySelectorAll(".faq-toggle");
 
-faqs.forEach(faq =>{
-
-    faq.addEventListener("click",()=>{
-        faqs.forEach(faq=>{
-            faq.classList.remove("active");
-        })
-        faq.classList.add("active");
+toggles.forEach(toggle =>{
+    toggle.addEventListener("click",() =>{
+        toggle.parentNode.classList.toggle("active");
     })
 })
