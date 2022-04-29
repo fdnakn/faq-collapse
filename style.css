@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: steelblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    margin-bottom: 50px;
+}
+.faq-container{
+    background-color: #fff;
+    padding: 10px;
+}
+.faq{
+    padding: 20px;
+    border: 1px solid black;
+    margin: 10px;
+    position: relative;
+    transition: 0.3s;
+}
+.faq-text{
+    margin-top: 5px;
+    color: red;
+    display: none;
+}
+.faq.active{
+    background-color: aqua;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--orange-color);
+}
+.faq.active .faq-text{
+    display: block;
+}
+.faq.active::before,.faq.active::after{
+    content: '\f075';
+    font-family: 'Font Awesome 6 Free';
+    color: #52b788;
+    font-size: 4rem;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+    opacity: 0.2;
+}
+.faq.active::before{
+    color: #2a6f97;
+    top: -5px;
+    left: -5px;
+    transform: rotateY(180deg);
+    
+}
+.faq-tittle{
+    margin: 0 35px 0 0;
+    transition: .3s;
+}
+.faq-toggle{
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+}
+.faq.active .faq-toggle {
+    color: orange;
+  }
+  
+  .faq-toggle .fa-times {
+    display: none;
+  }
+  
+  .faq.active .faq-toggle .fa-times {
+    display: block;
+  }
+  
+  .faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+  }
